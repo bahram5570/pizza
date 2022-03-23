@@ -14,7 +14,6 @@
         @apply hidden md:block relative rounded-full px-8 pt-2 pb-4 bg-lime-600 cursor-pointer;
     };
 
-    /* Hover effect of cart component */
     .header_cart_component:hover .header_bill_tooth {
         @apply translate-y-0
     }
@@ -25,11 +24,11 @@
     }
 
     .header_ul {
-        @apply flex mr-4 lg:mr-10
+        @apply flex flex-col-reverse md:flex-row md:mr-4 lg:mr-10 duration-700 mt-4 md:mt-0
     }
 
     .header_ul li {
-        @apply mx-3 lg:mx-4 border-b-2 border-transparent duration-200
+        @apply my-2 md:my-0 md:mx-3 lg:mx-4 border-b-2 border-transparent duration-200
     }
 
     .header_ul li:hover {
