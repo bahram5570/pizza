@@ -7,8 +7,8 @@ const HeaderCartSmall = () => {
          className="
             md:hidden 
             absolute 
-            bottom-10 
-            right-6 
+            bottom-14 
+            right-2 
             bg-lime-500 
             rounded-full 
             flex 

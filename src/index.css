@@ -28,10 +28,18 @@
     }
 
     .header_ul li {
-        @apply my-2 md:my-0 md:mx-3 lg:mx-4 border-b-2 border-transparent duration-200
+        @apply my-2 md:my-0 md:mx-3 lg:mx-4 border-b-2 border-transparent duration-200 text-lg text-right
     }
 
     .header_ul li:hover {
         @apply border-white
+    }
+
+    .footer {
+        @apply absolute bottom-0 left-0 w-full py-2 flex justify-center bg-red-700
+    }
+
+    .footer svg {
+        @apply mx-4 h-auto w-6 md:w-8 cursor-pointer duration-200 text-white hover:text-yellow-300
     }
 }

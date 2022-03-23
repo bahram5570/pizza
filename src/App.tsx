@@ -1,13 +1,12 @@
-import Header from './components/layout/header/Header';
+import React, {Fragment} from 'react';
 import MainApp from './components/main/MainApp';
 
 function App() {
 
   return (
-    <div>
+    <Fragment>
       <MainApp />
-      <Header />
-    </div>
+    </Fragment>
   );
 }
 

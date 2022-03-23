@@ -24,7 +24,7 @@ const Header: React.FC = () => {
                             <Link to='/About'>درباره ما</Link>
                         </li>
                         <li>
-                            <Link to='/Contact'>تماس با ما</Link>
+                            <Link to='/Menu'>منو</Link>
                         </li>
                         <li>
                             <Link to='/Home'>صفحه نخست</Link>
