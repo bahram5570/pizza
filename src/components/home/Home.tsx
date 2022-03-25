@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import mainImage from '../data/images/mainImage.jpg';
 import HomeGrids from './HomeGrids';
-import HomeSlider from './HomeSlides';
+import HomeSlider from './HomeSlider';
 
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
                 <HomeGrids />
             </section>
 
-            <section className='overflow-x-hidden mt-20'>
+            <section className='overflow-x-hidden mt-20 mb-10 md:w-9/12 md:mx-auto'>
                 <HomeSlider />
             </section>
         </Fragment>

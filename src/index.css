@@ -82,4 +82,8 @@
     .home_grids p {
         @apply text-sm text-center text-neutral-600
     }
+
+    #sliderItem:hover {
+        animation-play-state: paused;
+    }
 }

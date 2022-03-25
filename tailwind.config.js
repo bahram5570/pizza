@@ -21,7 +21,7 @@ module.exports = {
         }
       },
       animation: {
-        homeSlider: 'homeSlider 20s ease-out infinite'
+        homeSlider: 'homeSlider 20s infinite'
       },
       fontFamily: {
         Shabnam: ['Shabnam']

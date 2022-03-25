@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import {Fragment} from 'react';
 import MainApp from './components/main/MainApp';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <Fragment>
       <MainApp />
     </Fragment>
-  );
+  ); 
 }
 
 export default App;
