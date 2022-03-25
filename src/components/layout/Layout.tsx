@@ -8,10 +8,9 @@ interface ChildrenType {
 
 
 const Layout: React.FC<ChildrenType> = ({children}) => {
-    console.log(window)
 
     return (
-        <div className="min-h-screen h-full max-w-[1600px] relative">
+        <div className="min-h-screen h-full pb-16 max-w-[1600px] relative font-Shabnam">
             <Header />
 
             <main>

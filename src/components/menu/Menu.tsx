@@ -3,8 +3,8 @@
 const Menu = () => {
 
     return (
-        <div className="bg-teal-300">
-        menu
+        <div>
+            menu
         </div>
     )
 }
