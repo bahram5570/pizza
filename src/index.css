@@ -10,7 +10,14 @@
 }
 
 @layer utilities {
+    body {
+        @apply dark:bg-neutral-500 dark:text-white
+    }
+
+
+    
     /* Layout */
+
     .header_cart_component {
         @apply hidden md:block relative rounded-full px-8 pt-2 pb-4 bg-lime-600 cursor-pointer;
     };
@@ -28,11 +35,11 @@
         @apply flex flex-col-reverse md:flex-row md:mr-4 lg:mr-10 duration-700 mt-4 md:mt-0
     }
 
-    .header_ul li {
-        @apply my-2 md:w-20 lg:w-28 border-b-2 border-transparent duration-200 text-lg 
+    .header_ul li:not(:first-child) {
+        @apply my-2 mx-2 md:w-16 lg:w-20 border-b-2 border-transparent duration-200 text-lg 
     }
 
-    .header_ul li:hover {
+    .header_ul li:hover:not(:first-child) {
         @apply border-white
     }
 
@@ -40,12 +47,12 @@
         @apply flex md:flex-col-reverse justify-end items-center
     }
 
-    .header_ul svg {
+    .header_ul svg:not(:first-child) {
         @apply w-auto h-6 ml-3 md:ml-0 md:mb-2
     }
 
     .footer {
-        @apply absolute bottom-0 left-0 w-full py-2 flex justify-center bg-red-700
+        @apply absolute bottom-0 left-0 w-full py-2 flex justify-center bg-red-700 dark:bg-[#333333] dark:text-white
     }
 
     .footer svg {
@@ -56,7 +63,7 @@
 
     /* Home */
     .home_links {
-        @apply bg-headerRed flex items-center flex-col md:flex-row md:justify-evenly py-10
+        @apply bg-headerRed dark:bg-[#333333] flex items-center flex-col md:flex-row md:justify-evenly py-10
     }
 
     .home_links a {
@@ -72,15 +79,15 @@
     }
 
     .home_grids img {
-        @apply h-32 w-auto mb-2 opacity-60
+        @apply h-32 w-auto mb-2 opacity-60 dark:invert dark:opacity-100
     }
 
     .home_grids h3 {
-        @apply text-lg text-neutral-800 mb-2
+        @apply text-lg text-neutral-800 dark:text-white mb-2
     }
 
     .home_grids p {
-        @apply text-sm text-center text-neutral-600
+        @apply text-sm text-center text-neutral-600 dark:text-white
     }
 
     #sliderItem:hover {

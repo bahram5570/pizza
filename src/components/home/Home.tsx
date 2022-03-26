@@ -14,7 +14,7 @@ const Home = () => {
                     <Link to='/CustomPizza'>پیتزای خودتو بساز</Link>
                     <Link to='/Menu'>سفارش پیتزا</Link>
                 </div>
-                <img src={mainImage} alt='mainImage' />
+                <img src={mainImage} alt='mainImage' className='dark:grayscale' />
             </section>
 
             <section className='home_grids'>
