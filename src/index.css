@@ -27,7 +27,7 @@
     }
 
     .header_cart_component {
-        @apply hidden md:block relative rounded-full px-8 pt-2 pb-4 bg-lime-600 cursor-pointer;
+        @apply hidden md:block relative rounded-full px-8 pt-2 pb-4 bg-[#00ff00] dark:bg-[#00aa00] cursor-pointer;
     };
 
     .header_cart_component:hover .header_bill_tooth {
