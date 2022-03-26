@@ -18,6 +18,14 @@
     
     /* Layout */
 
+    .header_darkMode {
+        @apply relative w-14 h-7 bg-white text-black rounded-full cursor-pointer ml-4
+    }
+
+    .header_darkMode:hover span {
+        @apply shadow-[0_0_10px_#aaaaaa_inset]
+    }
+
     .header_cart_component {
         @apply hidden md:block relative rounded-full px-8 pt-2 pb-4 bg-lime-600 cursor-pointer;
     };
@@ -35,11 +43,11 @@
         @apply flex flex-col-reverse md:flex-row md:mr-4 lg:mr-10 duration-700 mt-4 md:mt-0
     }
 
-    .header_ul li:not(:first-child) {
+    .header_ul li {
         @apply my-2 mx-2 md:w-16 lg:w-20 border-b-2 border-transparent duration-200 text-lg 
     }
 
-    .header_ul li:hover:not(:first-child) {
+    .header_ul li:hover {
         @apply border-white
     }
 
@@ -47,7 +55,7 @@
         @apply flex md:flex-col-reverse justify-end items-center
     }
 
-    .header_ul svg:not(:first-child) {
+    .header_ul svg {
         @apply w-auto h-6 ml-3 md:ml-0 md:mb-2
     }
 

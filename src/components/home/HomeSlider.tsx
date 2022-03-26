@@ -19,7 +19,7 @@ const HomeSlider = () => {
               alt={x.alt}
               className="rounded-lg shadow-[0_10px_10px_#aaaaaa] dark:shadow-none"
             />
-            <h3 className="text-right text-xl mt-2 mr-4">{x.txt}</h3>
+            <h3 className="md:text-right text-xl mt-2 mx-4">{x.txt}</h3>
           </div>
         ))}
       </div>

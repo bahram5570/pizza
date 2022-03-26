@@ -7,7 +7,7 @@ interface OnShowType {
 
 const HeaderMenuIcon: React.FC<OnShowType> = ({ onShowMenu, showMenu }) => {
   return (
-    <div onClick={onShowMenu} className="md:hidden flex items-center mt-6">
+    <div onClick={onShowMenu} className="md:hidden flex items-center mt-8">
       <p className='mr-3 text-lg'>{showMenu ? 'بستن منو' : 'نمایش منو'}</p>
       <section>
         <span
