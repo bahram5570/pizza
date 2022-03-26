@@ -1,10 +1,11 @@
+import { Fragment } from 'react';
 import aboutImage from '../data/images/aboutImage.jpg';
 
 const About = () => {
   return (
-    <div>
+    <Fragment>
       <img src={aboutImage} alt="aboutImage" className="dark:grayscale" />
-      <div className="px-48 pt-6 text-right">
+      <div className="px-4 md:px-48 pt-6 mb-16 md:mb-0 text-right">
         <p>
           موسس پیتزا در سفری که به خارج از ایران رفته بود، زمانی که برای اولین
           بار با اپلیکیشن روی موبایلش، پیتزای مورد علاقه اش را ساخت و خیلی زود
@@ -28,7 +29,7 @@ const About = () => {
           ارائه خدمات به مشتریانش در محدوده قابل توجهی از شهر می باشیم
         </p>
       </div>
-    </div>
+    </Fragment>
   );
 };
 
