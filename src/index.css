@@ -101,4 +101,15 @@
     #sliderItem:hover {
         animation-play-state: paused;
     }
+
+
+
+    /* Login */
+    .login_form {
+        @apply flex flex-col mt-4
+    }
+
+    .login_form input {
+        @apply outline-none bg-white text-black text-right px-2 py-1 mt-1 rounded-md
+    }
 }

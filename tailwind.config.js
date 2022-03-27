@@ -4,7 +4,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
+    extend: { 
       keyframes: {
         homeSlider: {
           '0%': {transform: 'translateX(0)'},

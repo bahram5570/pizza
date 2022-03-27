@@ -10,7 +10,7 @@ interface ChildrenType {
 const Layout: React.FC<ChildrenType> = ({children}) => {
 
     return (
-        <div className="min-h-screen h-full pb-16 max-w-[1600px] relative font-Shabnam">
+        <div className="min-h-screen h-full pb-16 max-w-[1600px] relative overflow-hidden font-Shabnam">
             <Header />
 
             <main>
