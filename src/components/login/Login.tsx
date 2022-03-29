@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Signin from './signin/Signin';
-import Signup from './signup/Signup';
+import Signin from './Signin';
+import Signup from './Signup';
 import loginImage from '../data/images/loginImage.jpg';
 
 const Login = () => {

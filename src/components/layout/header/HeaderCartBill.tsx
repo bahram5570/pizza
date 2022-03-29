@@ -1,7 +1,4 @@
-
-
 const HeaderCartBill = () => {
-
     return (
         <div className="absolute top-11 left-8 right-8 text-black overflow-hidden">
             <div className="header_bill_tooth">

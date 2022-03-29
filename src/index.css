@@ -110,6 +110,6 @@
     }
 
     .login_form input {
-        @apply outline-none bg-white text-black text-right px-2 py-1 mt-1 rounded-md
+        @apply outline-none bg-white text-black px-2 py-1 mt-1 rounded-md
     }
 }
