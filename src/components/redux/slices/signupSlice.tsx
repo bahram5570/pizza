@@ -12,6 +12,7 @@ export const signupSlice = createSlice({
   reducers: {
     signupAction: (state, action) => {
       const currentUser = localStorage.getItem('user_' + action.payload.phone);
+      
       if (action.payload === 'finish') {
         state.status = null;
       } else if (currentUser) {

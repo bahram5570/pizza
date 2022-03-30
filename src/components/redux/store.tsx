@@ -1,11 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
 import darkModeSlice from './slices/darkModeSlice';
 import signupSlice from './slices/signupSlice';
+import signinSlice from './slices/signinSlice';
 
 export const store = configureStore({
     reducer: {
         darkModeStore: darkModeSlice,
-        signupStore: signupSlice
+        signupStore: signupSlice,
+        signinStore: signinSlice
     }
 });
 

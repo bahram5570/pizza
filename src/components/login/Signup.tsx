@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import FormStructure from './FormStructure';
 import useForm from './useForm';
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,8 +11,9 @@ interface ShowTypes {
 }
 
 const Signup = ({ onShowHandler, showSignin }: ShowTypes) => {
-  const { inputHandler, data, isValid } = useForm('signup');
+  const { inputHandler, reset, data, isValid } = useForm('signup');
   const { phoneMessage, passMessage, passConfirmMessage } = data;
+  const [userMessage, setUserMessage] = useState('');
 
   const dispatch = useDispatch();
   const status = useSelector((state: RootState) => state.signupStore).status;
@@ -20,13 +21,16 @@ const Signup = ({ onShowHandler, showSignin }: ShowTypes) => {
   useEffect(() => {
     if (status === 'success') {
       dispatch(signupAction('finish'));
+      reset();
+      setUserMessage('');
       onShowHandler();
+    } else if (status === 'fail') {
+      setUserMessage('این شماره ثبت شده است');
     }
-  }, [dispatch, onShowHandler, status]);
+  }, [dispatch, onShowHandler, reset, userMessage, status]);
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     dispatch(signupAction({ phone: data.phone, pass: data.pass }));
   };
 
@@ -48,12 +52,17 @@ const Signup = ({ onShowHandler, showSignin }: ShowTypes) => {
       `}
     >
       <span className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-70 -z-10" />
-      <h2 className="text-3xl pb-1 border-b-2 border-white">ثبت نام</h2>
+
+      <span className="flex justify-between items-end pb-1 border-b-2 border-white">
+        <p className="text-yellow-400">{userMessage}</p>
+        <h2 className="text-3xl">ثبت نام</h2>
+      </span>
 
       <FormStructure
         label="همراه"
         type="tel"
         name="phone"
+        value={data.phone}
         placeholder="09*********"
         message={phoneMessage}
         id="signupPhone"
@@ -64,6 +73,7 @@ const Signup = ({ onShowHandler, showSignin }: ShowTypes) => {
         label="رمز عبور"
         type="password"
         name="pass"
+        value={data.pass}
         placeholder="****"
         message={passMessage}
         id="signupPass"
@@ -74,6 +84,7 @@ const Signup = ({ onShowHandler, showSignin }: ShowTypes) => {
         label="تکرار رمز عبور"
         type="password"
         name="passConfirm"
+        value={data.passConfirm}
         placeholder="****"
         message={passConfirmMessage}
         id="signupPassConfirm"

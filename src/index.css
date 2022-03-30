@@ -52,7 +52,7 @@
     }
 
     .header_ul a {
-        @apply flex md:flex-col-reverse justify-end items-center
+        @apply flex md:flex-col-reverse justify-end items-center md:h-full
     }
 
     .header_ul svg {

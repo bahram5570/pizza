@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 
-const useForm = (type: string) => {
-  const [data, setData] = useState({
+const initialValues = {
     phone: '',
     phoneMessage: '',
     pass: '',
     passMessage: '',
     passConfirm: '',
     passConfirmMessage: '',
-  });
+}
+
+const useForm = (type: string) => {
+  const [data, setData] = useState(initialValues);
 
   let isValid = false;
 
@@ -25,9 +27,9 @@ const useForm = (type: string) => {
       };
 
       if (isNumber()) {
-        setData({ ...data, phoneMessage: 'شماره نامعتبر', phone: '' });
+        setData({ ...data, phoneMessage: 'شماره نامعتبر', phone: value });
       } else if (value.length < 11 || value.length > 11) {
-        setData({ ...data, phoneMessage: 'باید 11 عدد باشد', phone: '' });
+        setData({ ...data, phoneMessage: 'باید 11 عدد باشد', phone: value });
       } else {
         setData({ ...data, phoneMessage: '', phone: value });
       }
@@ -37,7 +39,7 @@ const useForm = (type: string) => {
   const passConditions = (name: string, value: string) => {
     if (name === 'pass') {
       if (value.length < 4) {
-        setData({ ...data, passMessage: 'حداقل 4 کارکتر', pass: '' });
+        setData({ ...data, passMessage: 'حداقل 4 کارکتر', pass: value });
       } else {
         setData({ ...data, passMessage: '', pass: value });
       }
@@ -50,7 +52,7 @@ const useForm = (type: string) => {
         setData({
           ...data,
           passConfirmMessage: 'حداقل 4 کارکتر',
-          passConfirm: '',
+          passConfirm: value,
         });
       } else if (value !== data.pass) {
         setData({
@@ -97,7 +99,12 @@ const useForm = (type: string) => {
     }
   }
 
-  return { inputHandler, data, isValid };
+  const reset = () => {
+    setData(initialValues)
+  };
+
+
+  return { inputHandler, reset, data, isValid };
 };
 
 export default useForm;

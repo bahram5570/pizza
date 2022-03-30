@@ -4,6 +4,7 @@ interface InputTypes {
   label: string;
   type: string;
   name: string;
+  value: string;
   placeholder: string;
   message: string;
   id: string;
@@ -14,6 +15,7 @@ const FormStructure: React.FC<InputTypes> = ({
   label,
   type,
   name,
+  value,
   placeholder,
   message,
   id,
@@ -30,6 +32,7 @@ const FormStructure: React.FC<InputTypes> = ({
         type={type}
         id={id}
         name={name}
+        value={value}
         placeholder={placeholder}
         onChange={inputHandler}
       />
