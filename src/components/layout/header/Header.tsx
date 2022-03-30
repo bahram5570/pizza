@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="px-4 lg:px-16  bg-headerRed dark:bg-[#333333] text-white">
+    <header className="px-4 lg:px-16 bg-headerRed dark:bg-[#333333] text-white">
       <div className="flex justify-between md:items-center border-b-2 border-red-600 dark:border-neutral-500">
         <section className="flex items-center h-fit">
           <HeaderIcon />

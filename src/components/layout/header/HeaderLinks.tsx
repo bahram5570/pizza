@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { signinAction } from '../../redux/slices/signinSlice';
 import { Link } from 'react-router-dom';
 import HeaderLogin from './HeaderLogin';
+import HeaderLogout from './HeaderLogout';
 import { FaHome, FaListUl, FaInfoCircle } from 'react-icons/fa';
 
 const HeaderLinks: React.FC<{ showMenu: boolean }> = ({ showMenu }) => {
+  const [showLogout, setShowLogout] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const yesHandler = () => {
+    dispatch(signinAction('logout'));
+    setShowLogout(false);
+  };
+
   return (
     <nav>
+      {showLogout && (
+        <HeaderLogout onYes={yesHandler} onNo={() => setShowLogout(false)} />
+      )}
+
       <ul
         className={`header_ul ${
           showMenu
@@ -14,7 +30,7 @@ const HeaderLinks: React.FC<{ showMenu: boolean }> = ({ showMenu }) => {
         }`}
       >
         <li>
-          <HeaderLogin />
+          <HeaderLogin onLogout={() => setShowLogout(true)} />
         </li>
 
         <li>

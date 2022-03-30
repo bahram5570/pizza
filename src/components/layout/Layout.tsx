@@ -1,23 +1,21 @@
-import React from "react";
-import Header from "./header/Header";
+import React from 'react';
+import Header from './header/Header';
 import Footer from './footer/Footer';
 
 interface ChildrenType {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const Layout: React.FC<ChildrenType> = ({children}) => {
-    return (
-        <div className="min-h-screen h-full pb-16 max-w-[1600px] relative overflow-hidden font-Shabnam">
-            <Header />
+const Layout: React.FC<ChildrenType> = ({ children }) => {
+  return (
+    <div className="min-h-screen h-full pb-16 max-w-[1600px] relative overflow-hidden font-Shabnam">
+      <Header />
 
-            <main>
-                {children}
-            </main>
+      <main>{children}</main>
 
-            <Footer />
-        </div>
-    )
-}
+      <Footer />
+    </div>
+  );
+};
 
 export default Layout;

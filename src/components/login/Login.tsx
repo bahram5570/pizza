@@ -7,7 +7,7 @@ const Login = () => {
   const [showSignin, setShowSignin] = useState(true);
 
   return (
-    <div className="flex justify-center items-center flex-col md:flex-row md:mt-10">
+    <div className="flex relative justify-center items-center flex-col md:flex-row">
       <img
         src={loginImage}
         alt="loginImage"
