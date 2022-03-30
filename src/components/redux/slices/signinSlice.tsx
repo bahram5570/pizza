@@ -17,6 +17,9 @@ const signinSlice = createSlice({
 
       if (action.payload === 'finish') {
         state.user = JSON.parse(localStorage.getItem('user') || '').phone;
+      } else if (action.payload === 'logout') {
+        localStorage.removeItem('user');
+        state.user = null;
       } else if (user) {
         if (action.payload.pass === user.pass) {
           state.user = 'success';
