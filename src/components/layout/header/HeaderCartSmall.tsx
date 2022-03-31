@@ -6,7 +6,7 @@ const HeaderCartSmall = () => {
         <div
          className="
             md:hidden 
-            absolute 
+            fixed 
             bottom-14 
             right-2 
             bg-lime-500 

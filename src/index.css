@@ -120,4 +120,62 @@
     .login_form input {
         @apply outline-none bg-white text-black px-2 py-1 mt-1 rounded-md
     }
+
+
+
+    /* Menu */
+    .menu {
+        @apply
+         flex 
+         flex-row-reverse
+         md:flex-col 
+         md:items-center 
+         justify-between 
+         md:rounded-md 
+         md:p-4 
+         pt-4
+         md:hover:shadow-[0_0_5px_#555555] 
+         dark:md:hover:shadow-[0_0_5px_#ffffff] 
+         duration-200
+    }
+
+    .menu img {
+        @apply w-24 h-fit md:min-w-max md:h-60 ml-4 md:ml-0 md:mb-2
+    }
+
+    .menu div  {
+        @apply flex flex-row-reverse md:flex-col justify-between md:items-center h-fit md:h-full w-full
+    }
+
+    .menu div div {
+        @apply flex flex-col items-end md:items-center
+    }
+
+    .menu h2 {
+        @apply text-xl md:text-2xl md:text-center font-bold
+    }
+
+    .menu h3 {
+        @apply text-right md:text-center text-xs md:text-base text-neutral-500 dark:text-neutral-300 my-2 md:my-4
+    }
+
+    .menu span {
+        @apply text-[#00dd00] dark:text-white
+    }
+
+    .menu button {
+        @apply bg-[#ff0000] text-white rounded-full p-2 md:py-4 md:px-10 md:mt-2 flex items-center h-fit md:w-fit md:opacity-0 duration-200
+    }
+
+    .menu:hover button {
+        @apply md:opacity-100
+    }
+
+    .menu button p {
+        @apply hidden md:block
+    }
+
+    .menu button svg {
+        @apply md:ml-2
+    }
 }
