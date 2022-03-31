@@ -7,10 +7,10 @@ const HeaderCartBill = () => {
                     <p>465000</p>
                 </span>
 
-                <span className="flex">
-                    <p className="mr-1">سفارش</p>
-                    <p>5</p>
-                </span>
+                <p className="flex">
+                    <span className="mr-1">سفارش</span>
+                    <span>5</span>
+                </p>
             </div>
         </div>
     )

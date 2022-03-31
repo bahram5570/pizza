@@ -10,6 +10,10 @@
 }
 
 @layer utilities {
+    html {
+        @apply scroll-smooth scroll-pt-28
+    }
+
     body {
         @apply dark:bg-neutral-500 dark:text-white
     }
@@ -159,8 +163,8 @@
         @apply text-right md:text-center text-xs md:text-base text-neutral-500 dark:text-neutral-300 my-2 md:my-4
     }
 
-    .menu span {
-        @apply text-[#00dd00] dark:text-white
+    .menu div div p {
+        @apply flex text-[#00dd00] dark:text-white
     }
 
     .menu button {
@@ -177,5 +181,24 @@
 
     .menu button svg {
         @apply md:ml-2
+    }
+
+
+
+    /* MenuHeader */
+    .menu_header {
+        @apply w-full bg-headerRed dark:bg-[#333333] text-white p-6
+    }
+
+    .menu_header ul {
+        @apply lg:flex justify-evenly items-center
+    }
+
+    .menu_header li:not(:first-child) a {
+        @apply md:hover:scale-105 duration-200 flex items-center
+    }
+
+    .menu_header img {
+        @apply w-8 h-auto ml-1 invert
     }
 }

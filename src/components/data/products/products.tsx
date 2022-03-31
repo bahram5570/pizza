@@ -24,8 +24,7 @@ import s1 from './images/s1.png';
 import s2 from './images/s2.png';
 import s3 from './images/s3.png';
 
-export const products = [
-  // Italian
+export const iPizza = [
   {
     id: 'i1',
     name: 'فیلتو',
@@ -73,10 +72,11 @@ export const products = [
       'پپرونی، هالوپینو، قارچ، فلفل دلمه، زیتون، اورگانو، پنیر موزارلا، سس ناپولی، خمیر مخصوص ایتالیایی',
     price: 125000,
     image: i6,
-  },
+  }
+];
 
-  // American
-  {
+export const aPizza = [
+ {
     id: 'a1',
     name: 'مخصوص',
     description:
@@ -124,9 +124,10 @@ export const products = [
     price: 135000,
     image: a6,
   },
+];
 
-  // Hot dog
-  {
+export const hotDog = [
+    {
     id: 'h1',
     name: 'هات داگ',
     description: 'هات داگ تنوری، پنیر، قارچ، چیپس، سس مخصوص',
@@ -146,10 +147,11 @@ export const products = [
     description: 'هات داگ تنوری، رست بیف، پنیر، قارچ، چیپس، سس مخصوص',
     price: 50000,
     image: h3,
-  },
+  }
+];
 
-  // Drinks
-  {
+export const drink = [
+ {
     id: 'd1',
     name: 'پپسی',
     description: '330cc',
@@ -170,8 +172,9 @@ export const products = [
     price: 8000,
     image: d3,
   },
+];
 
-  // Salad
+export const salad = [
   {
     id: 's1',
     name: 'سالاد سزار',
