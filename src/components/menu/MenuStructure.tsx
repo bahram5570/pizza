@@ -1,6 +1,8 @@
 import { FaShoppingBag } from 'react-icons/fa';
 
 interface TypeInputs {
+  id: string;
+  title: string;
   data: {
     id: string;
     name: string;
@@ -8,12 +10,11 @@ interface TypeInputs {
     price: number;
     image: string;
   }[];
-  id: string
 }
 
-const MenuStructure: React.FC<TypeInputs> = ({ data, id }) => {
+const MenuStructure: React.FC<TypeInputs> = ({ data, id, title }) => {
   const output = data.map((x) => (
-    <div key={x.id} id={id} className="menu">
+    <div key={x.id} className="menu_structure">
       <img src={x.image} alt={x.id} />
 
       <div>
@@ -37,8 +38,26 @@ const MenuStructure: React.FC<TypeInputs> = ({ data, id }) => {
   ));
 
   return (
-    <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 md:gap-6 px-2 md:px-4 lg:px-32 divide-y-2 md:divide-y-0">
-      {output}
+    <section id={id} className="mb-28 lg:mb-0">
+      <div className="flex justify-center relative lg:my-4">
+        <h1
+          className="
+          italic 
+          text-2xl 
+          lg:text-3xl 
+          mb-2 
+          px-4 
+          text-[#ff0000] 
+          dark:text-white 
+          bg-white 
+          dark:bg-neutral-500"
+        >
+          {title}
+        </h1>
+        <span className="absolute -z-10 top-4 w-5/6 lg:w-3/5 h-0.5 bg-[#ff0000] dark:bg-white" />
+      </div>
+
+      <div className="menu">{output}</div>
     </section>
   );
 };

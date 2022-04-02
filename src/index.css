@@ -87,7 +87,20 @@
     }
 
     .home_links a {
-        @apply text-xl border-2 flex justify-center my-4 py-2.5 w-4/6 md:w-80 rounded-full text-white hover:bg-white hover:text-headerRed duration-200
+        @apply
+         text-xl 
+         border-2 
+         flex 
+         justify-center 
+         my-4 
+         py-2.5 
+         w-4/6 
+         md:w-80 
+         rounded-full 
+         text-white 
+         hover:bg-white 
+         hover:text-headerRed 
+         duration-200
     }
 
     .home_grids {
@@ -129,6 +142,21 @@
 
     /* Menu */
     .menu {
+        @apply 
+         grid 
+         md:grid-cols-2 
+         lg:grid-cols-3 
+         gap-y-10 
+         md:gap-6 
+         px-2 
+         md:px-4 
+         lg:px-32 
+         divide-y-2 
+         dark:divide-[#888888] 
+         md:divide-y-0
+    }
+
+    .menu_structure {
         @apply
          flex 
          flex-row-reverse
@@ -143,43 +171,56 @@
          duration-200
     }
 
-    .menu img {
-        @apply w-24 h-fit md:min-w-max md:h-60 ml-4 md:ml-0 md:mb-2
+    .menu_structure img {
+        @apply w-24 h-fit md:min-w-max md:h-60 ml-4 md:ml-0 md:mb-2 rounded-2xl
     }
 
-    .menu div  {
+    .menu_structure div  {
         @apply flex flex-row-reverse md:flex-col justify-between md:items-center h-fit md:h-full w-full
     }
 
-    .menu div div {
+    .menu_structure div div {
         @apply flex flex-col items-end md:items-center
     }
 
-    .menu h2 {
-        @apply text-xl md:text-2xl md:text-center font-bold
+    .menu_structure h2 {
+        @apply text-xl md:text-2xl md:text-center lg:font-bold
     }
 
-    .menu h3 {
+    .menu_structure h3 {
         @apply text-right md:text-center text-xs md:text-base text-neutral-500 dark:text-neutral-300 my-2 md:my-4
     }
 
-    .menu div div p {
+    .menu_structure div div p {
         @apply flex text-[#00dd00] dark:text-white
     }
 
-    .menu button {
-        @apply bg-[#ff0000] text-white rounded-full p-2 md:py-4 md:px-10 md:mt-2 flex items-center h-fit md:w-fit md:opacity-0 duration-200
+    .menu_structure button {
+        @apply 
+         bg-[#ff0000] 
+         text-white 
+         rounded-full 
+         p-2 
+         md:py-4 
+         md:px-10 
+         md:mt-2 
+         flex 
+         items-center 
+         h-fit 
+         md:w-fit 
+         md:opacity-0 
+         duration-200
     }
 
-    .menu:hover button {
+    .menu_structure:hover button {
         @apply md:opacity-100
     }
 
-    .menu button p {
+    .menu_structure button p {
         @apply hidden md:block
     }
 
-    .menu button svg {
+    .menu_structure button svg {
         @apply md:ml-2
     }
 
@@ -187,18 +228,30 @@
 
     /* MenuHeader */
     .menu_header {
-        @apply w-full bg-headerRed dark:bg-[#333333] text-white p-6
+        @apply w-full bg-headerRed dark:bg-[#333333] text-black lg:text-white shadow-[0_3px_5px_#aaaaaa] lg:p-1
+    }
+
+    .menu_header button {
+        @apply lg:hidden w-full p-4 flex items-center justify-between text-white
     }
 
     .menu_header ul {
-        @apply lg:flex justify-evenly items-center
+        @apply flex-col-reverse lg:flex-row lg:justify-evenly lg:items-center
+    }
+
+    .menu_header li {
+        @apply my-1 lg:my-0 flex justify-end  w-full lg:w-fit px-4 py-2 lg:relative
     }
 
     .menu_header li:not(:first-child) a {
-        @apply md:hover:scale-105 duration-200 flex items-center
+        @apply lg:hover:scale-105 duration-200 flex items-center
     }
 
     .menu_header img {
-        @apply w-8 h-auto ml-1 invert
+        @apply w-8 h-auto ml-1 lg:invert
+    }
+
+    .menu_header_pointer {
+        @apply hidden absolute top-9 right-12 w-12 h-auto fill-headerRed dark:fill-[#333333]
     }
 }
