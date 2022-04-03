@@ -27,6 +27,7 @@ const MenuHeader: React.FC<TypeInputs> = ({ scrolled, selectedHeader }) => {
     return () => document.body.removeEventListener('click', onClose);
   });
 
+
   return (
     <nav className={`menu_header ${scrolled ? 'fixed top-0 z-10' : 'mb-6'}`}>
       <button id="closeButton" onClick={() => setShowMenu(true)}>

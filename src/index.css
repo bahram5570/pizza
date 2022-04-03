@@ -184,7 +184,27 @@
     }
 
     .menu_structure h2 {
-        @apply text-xl md:text-2xl md:text-center lg:font-bold
+        @apply text-lg md:text-2xl md:text-center lg:font-bold relative
+    }
+
+    .menu_structure h2 span {
+        @apply 
+         absolute 
+         top-0 
+         -left-4
+         md:-left-6 
+         bg-green-500 
+         text-white 
+         text-xs 
+         md:text-sm 
+         rounded-full 
+         w-4 
+         h-4 
+         md:w-5 
+         md:h-5 
+         
+         items-center 
+         justify-center
     }
 
     .menu_structure h3 {
@@ -202,12 +222,14 @@
          rounded-full 
          p-2 
          md:py-4 
-         md:px-10 
+         md:px-2 
          md:mt-2 
          flex 
          items-center 
+         md:justify-center
          h-fit 
-         md:w-fit 
+         md:w-full 
+         xl:w-4/5
          md:opacity-0 
          duration-200
     }

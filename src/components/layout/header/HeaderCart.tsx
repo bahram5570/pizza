@@ -1,7 +1,11 @@
 import HeaderCartBill from "./HeaderCartBill";
 import { FaShoppingCart } from "react-icons/fa";
 
-const HeaderCart = () => {
+interface TypeInputs {
+    items: {qt: number, price: number}
+}
+
+const HeaderCart = ({items}: TypeInputs) => {
 
     return (
         <div className="header_cart_component">
@@ -10,7 +14,7 @@ const HeaderCart = () => {
                 <p>نمایش سبد خرید من</p>
             </div>
 
-            <HeaderCartBill />
+            <HeaderCartBill items={items} />
         </div>
     )
 }

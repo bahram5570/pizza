@@ -1,4 +1,4 @@
-import { FaShoppingBag } from 'react-icons/fa';
+import MenuStructureItems from './MenuStructureItems';
 
 interface TypeInputs {
   id: string;
@@ -13,30 +13,6 @@ interface TypeInputs {
 }
 
 const MenuStructure: React.FC<TypeInputs> = ({ data, id, title }) => {
-  const output = data.map((x) => (
-    <div key={x.id} className="menu_structure">
-      <img src={x.image} alt={x.id} />
-
-      <div>
-        <div>
-          <h2>{x.name}</h2>
-
-          <h3>{x.description}</h3>
-
-          <p>
-            <span className="mr-1">تومان</span>
-            <span>{x.price}</span>
-          </p>
-        </div>
-
-        <button>
-          <p>افزودن به سبد خرید</p>
-          <FaShoppingBag />
-        </button>
-      </div>
-    </div>
-  ));
-
   return (
     <section id={id} className="mb-28 lg:mb-0">
       <div className="flex justify-center relative lg:my-4">
@@ -57,7 +33,9 @@ const MenuStructure: React.FC<TypeInputs> = ({ data, id, title }) => {
         <span className="absolute -z-10 top-4 w-5/6 lg:w-3/5 h-0.5 bg-[#ff0000] dark:bg-white" />
       </div>
 
-      <div className="menu">{output}</div>
+      <div className="menu">
+        {data.map((x) => (<MenuStructureItems key={x.id} item={x} />))}
+      </div>
     </section>
   );
 };

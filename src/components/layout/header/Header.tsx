@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import {RootState} from '../../redux/store'
 import HeaderIcon from './HeaderIcon';
 import HeaderLinks from './HeaderLinks';
 import HeaderCart from './HeaderCart';
@@ -7,6 +9,15 @@ import HeaderMenuIcon from './HeaderMenuIcon';
 
 const Header: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  const cartData = useSelector((state: RootState) => state.cartStore);
+
+  const items = {qt: 0, price: 0};
+  
+  cartData.forEach(x => {
+    items.qt = items.qt + x.quantity;
+    items.price = items.price + (x.quantity * x.price)
+  })
 
   return (
     <header className="px-4 lg:px-16 bg-headerRed dark:bg-[#333333] text-white">
@@ -21,8 +32,8 @@ const Header: React.FC = () => {
             onShowMenu={() => setShowMenu(!showMenu)}
           />
           <HeaderLinks showMenu={showMenu} />
-          <HeaderCart />
-          <HeaderCartSmall />
+          <HeaderCart items={items} />
+          <HeaderCartSmall items={items.qt} />
         </section>
       </div>
     </header>

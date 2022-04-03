@@ -1,6 +1,10 @@
 import { FaShoppingBag } from "react-icons/fa";
 
-const HeaderCartSmall = () => {
+interface TypeInputs {
+    items: number
+}
+
+const HeaderCartSmall = ({items}: TypeInputs) => {
 
     return (
         <div
@@ -30,7 +34,7 @@ const HeaderCartSmall = () => {
                 flex 
                 items-center 
                 justify-center">
-                <p>5</p>
+                <p>{items}</p>
             </span>
         </div>
     )

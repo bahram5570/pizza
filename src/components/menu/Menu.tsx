@@ -58,7 +58,7 @@ const Menu = () => {
   });
 
   return (
-    <div className={`${scrolled && 'lg:pt-[130px]'}`}>
+    <div className={`${scrolled && 'pt-[80px] lg:pt-[130px]'}`}>
       <MenuHeader scrolled={scrolled} selectedHeader={selectedHeader} />
 
       <MenuStructure id="aPizza" data={aPizza} title="پیتزا آمریکایی" />
