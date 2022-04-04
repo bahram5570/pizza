@@ -3,92 +3,112 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: Shabnam;
-        src: url(components/data/fonts/Shabnam.ttf);
-    }
+  @font-face {
+    font-family: Shabnam;
+    src: url(components/data/fonts/Shabnam.ttf);
+  }
 }
 
 @layer utilities {
-    html {
-        @apply scroll-smooth scroll-pt-28
-    }
+  html {
+    @apply scroll-smooth scroll-pt-28;
+  }
 
-    body {
-        @apply dark:bg-neutral-500 dark:text-white
-    }
+  body {
+    @apply dark:bg-neutral-500 dark:text-white relative;
+  }
 
+  /* Layout */
 
-    
-    /* Layout */
+  .header_darkMode {
+    @apply relative w-14 h-7 bg-white text-black rounded-full cursor-pointer ml-4;
+  }
 
-    .header_darkMode {
-        @apply relative w-14 h-7 bg-white text-black rounded-full cursor-pointer ml-4
-    }
+  .header_darkMode:hover span {
+    @apply md:shadow-[0_0_20px_#ffffff];
+  }
 
-    .header_darkMode:hover span {
-        @apply md:shadow-[0_0_20px_#ffffff]
-    }
+  .header_cart_component {
+    @apply hidden md:block relative rounded-full px-8 pt-2 pb-4 bg-[#00ff00] dark:bg-[#00aa00] cursor-pointer;
+  }
 
-    .header_cart_component {
-        @apply hidden md:block relative rounded-full px-8 pt-2 pb-4 bg-[#00ff00] dark:bg-[#00aa00] cursor-pointer;
-    };
+  .header_cart_component:hover .header_bill_tooth {
+    @apply translate-y-0;
+  }
 
-    .header_cart_component:hover .header_bill_tooth {
-        @apply translate-y-0
-    }
+  .header_bill_tooth {
+    @apply flex justify-between bg-white text-sm px-2 pt-1 pb-3 -translate-y-7 duration-200;
+    clip-path: polygon(
+      100% 100%,
+      100% 0%,
+      0% 0%,
+      0% 100%,
+      5% 90%,
+      10% 100%,
+      15% 90%,
+      20% 100%,
+      25% 90%,
+      30% 100%,
+      35% 90%,
+      40% 100%,
+      45% 90%,
+      50% 100%,
+      55% 90%,
+      60% 100%,
+      65% 90%,
+      70% 100%,
+      75% 90%,
+      80% 100%,
+      85% 90%,
+      90% 100%,
+      95% 90%,
+      100% 100%
+    );
+  }
 
-    .header_bill_tooth {
-        @apply flex justify-between bg-white text-sm px-2 pt-1 pb-3 -translate-y-7 duration-200;
-        clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%, 5% 90%, 10% 100%, 15% 90%, 20% 100%, 25% 90%, 30% 100%, 35% 90%, 40% 100%, 45% 90%, 50% 100%, 55% 90%, 60% 100%, 65% 90%, 70% 100%, 75% 90%, 80% 100%, 85% 90%, 90% 100%, 95% 90%, 100% 100%);  
-    }
+  .header_ul {
+    @apply flex flex-col-reverse md:flex-row md:mr-4 lg:mr-10 duration-700 mt-4 md:mt-0;
+  }
 
-    .header_ul {
-        @apply flex flex-col-reverse md:flex-row md:mr-4 lg:mr-10 duration-700 mt-4 md:mt-0
-    }
+  .header_ul li {
+    @apply my-2 mx-2 md:w-16 lg:w-20 border-b-2 border-transparent duration-200 text-lg;
+  }
 
-    .header_ul li {
-        @apply my-2 mx-2 md:w-16 lg:w-20 border-b-2 border-transparent duration-200 text-lg 
-    }
+  .header_ul li:hover {
+    @apply border-white;
+  }
 
-    .header_ul li:hover {
-        @apply border-white
-    }
+  .header_ul a {
+    @apply flex md:flex-col-reverse justify-end items-center md:h-full;
+  }
 
-    .header_ul a {
-        @apply flex md:flex-col-reverse justify-end items-center md:h-full
-    }
+  .header_ul svg {
+    @apply w-auto h-6 ml-3 md:ml-0 md:mb-2;
+  }
 
-    .header_ul svg {
-        @apply w-auto h-6 ml-3 md:ml-0 md:mb-2
-    }
+  .header_login {
+    @apply relative flex md:flex-col-reverse items-center md:justify-between md:h-full md:pb-1 cursor-pointer;
+  }
 
-    .header_login {
-        @apply relative flex md:flex-col-reverse items-center md:justify-between md:h-full md:pb-1 cursor-pointer
-    }
+  .header_login p {
+    @apply text-xs;
+  }
 
-    .header_login p {
-        @apply text-xs
-    }
+  .footer {
+    @apply absolute bottom-0 left-0 w-full py-2 flex justify-center bg-red-700 dark:bg-[#333333] dark:text-white;
+  }
 
-    .footer {
-        @apply absolute bottom-0 left-0 w-full py-2 flex justify-center bg-red-700 dark:bg-[#333333] dark:text-white
-    }
+  .footer svg {
+    @apply mx-4 h-auto w-6 md:w-8 cursor-pointer duration-200 text-white hover:text-yellow-300;
+  }
 
-    .footer svg {
-        @apply mx-4 h-auto w-6 md:w-8 cursor-pointer duration-200 text-white hover:text-yellow-300
-    }
+  /* Home */
+  .home_links {
+    @apply bg-headerRed dark:bg-[#333333] flex items-center flex-col md:flex-row md:justify-evenly py-10;
+  }
 
-
-
-    /* Home */
-    .home_links {
-        @apply bg-headerRed dark:bg-[#333333] flex items-center flex-col md:flex-row md:justify-evenly py-10
-    }
-
-    .home_links a {
-        @apply
-         text-xl 
+  .home_links a {
+    @apply text-xl 
          border-2 
          flex 
          justify-center 
@@ -100,50 +120,45 @@
          text-white 
          hover:bg-white 
          hover:text-headerRed 
-         duration-200
-    }
+         duration-200;
+  }
 
-    .home_grids {
-        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 pt-10
-    }
+  .home_grids {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-8 pt-10;
+  }
 
-    .home_grids div {
-        @apply flex flex-col items-center
-    }
+  .home_grids div {
+    @apply flex flex-col items-center;
+  }
 
-    .home_grids img {
-        @apply h-32 w-auto mb-2 opacity-60 dark:invert dark:opacity-100
-    }
+  .home_grids img {
+    @apply h-32 w-auto mb-2 opacity-60 dark:invert dark:opacity-100;
+  }
 
-    .home_grids h3 {
-        @apply text-lg text-neutral-800 dark:text-white mb-2
-    }
+  .home_grids h3 {
+    @apply text-lg text-neutral-800 dark:text-white mb-2;
+  }
 
-    .home_grids p {
-        @apply text-sm text-center text-neutral-600 dark:text-white
-    }
+  .home_grids p {
+    @apply text-sm text-center text-neutral-600 dark:text-white;
+  }
 
-    #sliderItem:hover {
-        animation-play-state: paused;
-    }
+  #sliderItem:hover {
+    animation-play-state: paused;
+  }
 
+  /* Login */
+  .login_form {
+    @apply flex flex-col mt-4;
+  }
 
+  .login_form input {
+    @apply outline-none bg-white text-black px-2 py-1 mt-1 rounded-md;
+  }
 
-    /* Login */
-    .login_form {
-        @apply flex flex-col mt-4
-    }
-
-    .login_form input {
-        @apply outline-none bg-white text-black px-2 py-1 mt-1 rounded-md
-    }
-
-
-
-    /* Menu */
-    .menu {
-        @apply 
-         grid 
+  /* Menu */
+  .menu {
+    @apply grid 
          md:grid-cols-2 
          lg:grid-cols-3 
          gap-y-10 
@@ -153,12 +168,11 @@
          lg:px-32 
          divide-y-2 
          dark:divide-[#888888] 
-         md:divide-y-0
-    }
+         md:divide-y-0;
+  }
 
-    .menu_structure {
-        @apply
-         flex 
+  .menu_structure {
+    @apply flex 
          flex-row-reverse
          md:flex-col 
          md:items-center 
@@ -168,28 +182,27 @@
          pt-4
          md:hover:shadow-[0_0_5px_#555555] 
          dark:md:hover:shadow-[0_0_5px_#ffffff] 
-         duration-200
-    }
+         duration-200;
+  }
 
-    .menu_structure img {
-        @apply w-24 h-fit md:min-w-max md:h-60 ml-4 md:ml-0 md:mb-2 rounded-2xl
-    }
+  .menu_structure img {
+    @apply w-24 h-fit md:min-w-max md:h-60 ml-4 md:ml-0 md:mb-2 rounded-2xl;
+  }
 
-    .menu_structure div  {
-        @apply flex flex-row-reverse md:flex-col justify-between md:items-center h-fit md:h-full w-full
-    }
+  .menu_structure div {
+    @apply flex flex-row-reverse md:flex-col justify-between md:items-center h-fit md:h-full w-full;
+  }
 
-    .menu_structure div div {
-        @apply flex flex-col items-end md:items-center
-    }
+  .menu_structure div div {
+    @apply flex flex-col items-end md:items-center;
+  }
 
-    .menu_structure h2 {
-        @apply text-lg md:text-2xl md:text-center lg:font-bold relative
-    }
+  .menu_structure h2 {
+    @apply text-lg md:text-2xl md:text-center lg:font-bold relative;
+  }
 
-    .menu_structure h2 span {
-        @apply 
-         absolute 
+  .menu_structure h2 span {
+    @apply absolute 
          top-0 
          -left-4
          md:-left-6 
@@ -202,22 +215,20 @@
          h-4 
          md:w-5 
          md:h-5 
-         
          items-center 
-         justify-center
-    }
+         justify-center;
+  }
 
-    .menu_structure h3 {
-        @apply text-right md:text-center text-xs md:text-base text-neutral-500 dark:text-neutral-300 my-2 md:my-4
-    }
+  .menu_structure h3 {
+    @apply text-right md:text-center text-xs md:text-base text-neutral-500 dark:text-neutral-300 my-2 md:my-4;
+  }
 
-    .menu_structure div div p {
-        @apply flex text-[#00dd00] dark:text-white
-    }
+  .menu_structure div div p {
+    @apply flex text-[#00dd00] dark:text-white;
+  }
 
-    .menu_structure button {
-        @apply 
-         bg-[#ff0000] 
+  .menu_structure button {
+    @apply bg-[#ff0000] 
          text-white 
          rounded-full 
          p-2 
@@ -231,49 +242,47 @@
          md:w-full 
          xl:w-4/5
          md:opacity-0 
-         duration-200
-    }
+         duration-200;
+  }
 
-    .menu_structure:hover button {
-        @apply md:opacity-100
-    }
+  .menu_structure:hover button {
+    @apply md:opacity-100;
+  }
 
-    .menu_structure button p {
-        @apply hidden md:block
-    }
+  .menu_structure button p {
+    @apply hidden md:block;
+  }
 
-    .menu_structure button svg {
-        @apply md:ml-2
-    }
+  .menu_structure button svg {
+    @apply md:ml-2;
+  }
 
+  /* MenuHeader */
+  .menu_header {
+    @apply w-full bg-headerRed dark:bg-[#333333] text-black lg:text-white shadow-[0_3px_5px_#aaaaaa] lg:p-1;
+  }
 
+  .menu_header button {
+    @apply lg:hidden w-full p-4 flex items-center justify-between text-white;
+  }
 
-    /* MenuHeader */
-    .menu_header {
-        @apply w-full bg-headerRed dark:bg-[#333333] text-black lg:text-white shadow-[0_3px_5px_#aaaaaa] lg:p-1
-    }
+  .menu_header ul {
+    @apply flex-col-reverse lg:flex-row lg:justify-evenly lg:items-center;
+  }
 
-    .menu_header button {
-        @apply lg:hidden w-full p-4 flex items-center justify-between text-white
-    }
+  .menu_header li {
+    @apply my-1 lg:my-0 flex justify-end  w-full lg:w-fit px-4 py-2 lg:relative;
+  }
 
-    .menu_header ul {
-        @apply flex-col-reverse lg:flex-row lg:justify-evenly lg:items-center
-    }
+  .menu_header li:not(:first-child) a {
+    @apply lg:hover:scale-105 duration-200 flex items-center;
+  }
 
-    .menu_header li {
-        @apply my-1 lg:my-0 flex justify-end  w-full lg:w-fit px-4 py-2 lg:relative
-    }
+  .menu_header img {
+    @apply w-8 h-auto ml-1 lg:invert;
+  }
 
-    .menu_header li:not(:first-child) a {
-        @apply lg:hover:scale-105 duration-200 flex items-center
-    }
-
-    .menu_header img {
-        @apply w-8 h-auto ml-1 lg:invert
-    }
-
-    .menu_header_pointer {
-        @apply hidden absolute top-9 right-12 w-12 h-auto fill-headerRed dark:fill-[#333333]
-    }
+  .menu_header_pointer {
+    @apply hidden absolute top-9 right-12 w-12 h-auto fill-headerRed dark:fill-[#333333];
+  }
 }

@@ -6,9 +6,8 @@ interface TypeInputs {
 }
 
 const HeaderCart = ({items}: TypeInputs) => {
-
     return (
-        <div className="header_cart_component">
+        <div id='cartComponent' className="header_cart_component">
             <div className="flex items-center pb-2 border-b-2 border-black">
                 <FaShoppingCart className="mr-2 w-auto h-6" />
                 <p>نمایش سبد خرید من</p>

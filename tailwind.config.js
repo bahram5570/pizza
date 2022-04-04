@@ -18,10 +18,7 @@ module.exports = {
           '80%': {transform: 'translateX(calc(380px * -4))'},
           '90%': {transform: 'translateX(calc(380px * -5))'},
           '100%': {transform: 'translateX(calc(380px * -5))'},
-        }
-      },
-      animation: {
-        homeSlider: 'homeSlider 20s infinite'
+        },
       },
       fontFamily: {
         Shabnam: ['Shabnam']

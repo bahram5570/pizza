@@ -1,0 +1,9 @@
+.menuAnimation {
+    animation: animation 2s forwards;
+}
+
+@keyframes animation {
+    30% {transform: translateY(-200%);}
+    70% {bottom: 64px; right: 14px; opacity: 1;}
+    100% {bottom: 64px; right: 14px; opacity: 0;}   
+}
