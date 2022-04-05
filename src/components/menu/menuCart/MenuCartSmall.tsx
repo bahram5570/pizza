@@ -1,10 +1,8 @@
+import { useCartTotal } from '../../utils/useCartTotal';
 import { FaShoppingBag } from 'react-icons/fa';
 
-interface TypeInputs {
-  items: number;
-}
-
-const HeaderCartSmall = ({ items }: TypeInputs) => {
+const MenuCartSmall = () => {
+  const { totalQt } = useCartTotal();
   return (
     <div
       id="smallCartComponent"
@@ -23,7 +21,7 @@ const HeaderCartSmall = ({ items }: TypeInputs) => {
         duration-200
         cursor-pointer"
     >
-      <FaShoppingBag className="w-auto h-6" />
+      <FaShoppingBag className="w-auto h-8 fill-white" />
 
       <span
         className="
@@ -31,6 +29,7 @@ const HeaderCartSmall = ({ items }: TypeInputs) => {
           top-2 
           right-2 
           bg-red-600 
+          text-white
           w-5 
           h-5 
           rounded-full 
@@ -38,10 +37,10 @@ const HeaderCartSmall = ({ items }: TypeInputs) => {
           items-center 
           justify-center"
       >
-        <p>{items}</p>
+        <p>{totalQt}</p>
       </span>
     </div>
   );
 };
 
-export default HeaderCartSmall;
+export default MenuCartSmall;

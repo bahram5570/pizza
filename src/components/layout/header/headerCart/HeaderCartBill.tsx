@@ -5,12 +5,12 @@ interface TypeInputs {
 
 const HeaderCartBill = ({ totalPrice, totalQt }: TypeInputs) => {
   return (
-    <div className="absolute top-11 left-8 right-8 text-black overflow-hidden">
+    <div className="absolute top-[42px] left-8 right-8 text-black overflow-hidden">
       <div className="header_bill_tooth">
-        <span className="flex">
-          <p className="mr-1">ت</p>
-          <p>{totalPrice}</p>
-        </span>
+        <p className="flex">
+          <span className="mr-1">ت</span>
+          <span>{totalPrice}</span>
+        </p>
 
         <p className="flex">
           <span className="mr-1">سفارش</span>

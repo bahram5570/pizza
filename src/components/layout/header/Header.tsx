@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import HeaderIcon from './headerLinks/HeaderDarkMode';
 import HeaderLinks from './headerLinks/HeaderLinks';
 import HeaderCart from './headerCart/HeaderCart';
-import HeaderCartSmall from './headerCart/HeaderCartSmall';
 import HeaderMenuIcon from './headerLinks/HeaderMenuIcon';
 import { useCartTotal } from '../../utils/useCartTotal';
 
@@ -26,7 +25,6 @@ const Header: React.FC = () => {
 
           <HeaderLinks showMenu={showMenu} />
           <HeaderCart totalQt={totalQt} totalPrice={totalPrice} />
-          <HeaderCartSmall items={totalQt} />
         </section>
       </div>
     </header>

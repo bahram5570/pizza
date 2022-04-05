@@ -1,4 +1,6 @@
 import { Fragment } from 'react';
+import { useDispatch } from 'react-redux';
+import { plusCart, minusCart, removeCart } from '../../redux/slices/cartSlice';
 import { FaMinus, FaPlus, FaTrash } from 'react-icons/fa';
 
 interface TypeInputs {
@@ -13,6 +15,8 @@ interface TypeInputs {
 }
 
 const MenuCartItems = ({ items }: TypeInputs) => {
+  const dispatch = useDispatch();
+
   return (
     <Fragment>
       {items.map((x) => (
@@ -23,19 +27,18 @@ const MenuCartItems = ({ items }: TypeInputs) => {
           </p>
 
           <div>
-            <button>
-              {x.quantity === 1 ? (
-                <FaTrash className="fill-[#ff0000]" />
-              ) : (
-                <FaMinus />
-              )}
-            </button>
+            {x.quantity === 1 ? (
+              <FaTrash
+                onClick={() => dispatch(removeCart(x.id))}
+                className="fill-[#ff0000]"
+              />
+            ) : (
+              <FaMinus onClick={() => dispatch(minusCart(x.id))} />
+            )}
 
             <p>{x.quantity}</p>
 
-            <button>
-              <FaPlus />
-            </button>
+            <FaPlus onClick={() => dispatch(plusCart(x.id))} />
           </div>
 
           <h2>{x.name}</h2>
