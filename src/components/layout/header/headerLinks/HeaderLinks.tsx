@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { signinAction } from '../../redux/slices/signinSlice';
+import { signinAction } from '../../../redux/slices/signinSlice';
 import { Link } from 'react-router-dom';
-import HeaderLogin from './HeaderLogin';
-import HeaderLogout from './HeaderLogout';
+import HeaderLogin from '../headerLogin/HeaderLogin';
+import HeaderLogout from '../headerLogin/HeaderLogout';
 import { FaHome, FaListUl, FaInfoCircle } from 'react-icons/fa';
 
 const HeaderLinks: React.FC<{ showMenu: boolean }> = ({ showMenu }) => {

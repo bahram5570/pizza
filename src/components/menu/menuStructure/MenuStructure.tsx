@@ -30,11 +30,14 @@ const MenuStructure: React.FC<TypeInputs> = ({ data, id, title }) => {
         >
           {title}
         </h1>
+
         <span className="absolute -z-10 top-4 w-5/6 lg:w-3/5 h-0.5 bg-[#ff0000] dark:bg-white" />
       </div>
 
       <div className="menu">
-        {data.map((x) => (<MenuStructureItems key={x.id} item={x} />))}
+        {data.map((x) => (
+          <MenuStructureItems key={x.id} item={x} />
+        ))}
       </div>
     </section>
   );

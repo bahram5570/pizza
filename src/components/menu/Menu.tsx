@@ -1,6 +1,7 @@
-import MenuHeader from './MenuHeader';
-import MenuStructure from './MenuStructure';
-import { useMenuTags } from './useMenuTags';
+import MenuHeader from './menuHeader/MenuHeader';
+import MenuStructure from './menuStructure/MenuStructure';
+import MenuCart from './menuCart/MenuCart';
+import { useMenuTags } from './menuStructure/useMenuTags';
 import {
   iPizza,
   aPizza,
@@ -15,6 +16,7 @@ const Menu = () => {
   return (
     <div className={`${scrolled && 'pt-[80px] lg:pt-[130px]'}`}>
       <MenuHeader scrolled={scrolled} selectedHeader={selectedHeader} />
+      <MenuCart />
 
       <MenuStructure id="aPizza" data={aPizza} title="پیتزا آمریکایی" />
       <MenuStructure id="iPizza" data={iPizza} title="پیتزا ایتالیایی" />

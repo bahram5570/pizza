@@ -20,7 +20,7 @@ const MenuHeaderStructure: React.FC<TypeInputs> = ({
     <li
       className={`${
         isSelected &&
-        'bg-neutral-200 lg:bg-inherit text-red-600 lg:text-inherit'
+        'bg-neutral-100 lg:bg-inherit text-red-600 lg:text-inherit'
       }`}
     >
       <a href={id}>

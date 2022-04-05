@@ -3,13 +3,15 @@ import darkModeSlice from './slices/darkModeSlice';
 import signupSlice from './slices/signupSlice';
 import signinSlice from './slices/signinSlice';
 import cartSlice from './slices/cartSlice';
+import showCartSlice from './slices/showCartSlice';
 
 export const store = configureStore({
     reducer: {
         darkModeStore: darkModeSlice,
         signupStore: signupSlice,
         signinStore: signinSlice,
-        cartStore: cartSlice
+        cartStore: cartSlice,
+        showCartStore: showCartSlice
     }
 });
 

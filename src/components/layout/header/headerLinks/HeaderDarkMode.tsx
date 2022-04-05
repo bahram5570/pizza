@@ -1,12 +1,11 @@
 import { Fragment, useEffect } from 'react';
-import brandIcon from '../../data/images/brandIcon.png';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../../redux/store';
+import { darkMode as toggle } from '../../../redux/slices/darkModeSlice';
+import brandIcon from '../../../data/images/brandIcon.png';
 import { BsSunFill, BsMoonFill } from 'react-icons/bs';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../redux/store';
-import { darkMode as toggle } from '../../redux/slices/darkModeSlice';
-
-const HeaderIcon = () => {
+const HeaderDarkMode = () => {
   const darkMode = useSelector((state: RootState) => state.darkModeStore);
   const dispatch = useDispatch();
 
@@ -43,4 +42,4 @@ const HeaderIcon = () => {
   );
 };
 
-export default HeaderIcon;
+export default HeaderDarkMode;

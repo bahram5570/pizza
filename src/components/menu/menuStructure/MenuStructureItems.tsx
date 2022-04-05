@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../redux/slices/cartSlice';
-import { RootState } from '../redux/store';
-import MenuAnimation from './MenuAnimation';
+import { addToCart } from '../../redux/slices/cartSlice';
+import { RootState } from '../../redux/store';
+import MenuAnimation from '../menuAnimation/MenuAnimation';
 import { FaShoppingBag } from 'react-icons/fa';
 
 interface TypeInputs {
