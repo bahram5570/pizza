@@ -1,7 +1,12 @@
+import CustomLayers from "./CustomLayers";
+
 const CustomPizza = () => {
 
     return (
-        <div>CustomPizza</div>
+        <div>
+            CustomPizza
+            <CustomLayers />
+        </div>
     )
 }
 
