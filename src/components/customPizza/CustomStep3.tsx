@@ -1,5 +1,5 @@
 import CustomStructureRadio from './CustomStructureRadio';
-import { dough } from '../data/custom/customData';
+import { cheese } from '../data/custom/customData';
 import { useDispatch } from 'react-redux';
 import { customValueAction } from '../redux/slices/customValueSlice';
 
@@ -10,16 +10,16 @@ interface TypeValues {
   layer: string;
 }
 
-const CustomStep1 = () => {
+const CustomStep3 = () => {
   const dispatch = useDispatch();
 
   const valueHandler = (e: TypeValues) => {
-    dispatch(customValueAction({ type: 'dough', value: e }));
+    dispatch(customValueAction({ type: 'cheese', value: e }));
   };
 
   return (
-    <CustomStructureRadio type="dough" data={dough} onValue={valueHandler} />
+    <CustomStructureRadio type="cheese" data={cheese} onValue={valueHandler} />
   );
 };
 
-export default CustomStep1;
+export default CustomStep3;

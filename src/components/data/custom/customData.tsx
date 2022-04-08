@@ -99,24 +99,28 @@ export const beef = [
     name: 'فیله گوشت',
     icon: b_icon_beef,
     layer: b_beef,
+    extra: false
   },
   {
     id: 'b_chicken',
     name: 'مرغ',
     icon: b_icon_chicken,
     layer: b_chicken,
+    extra: false
   },
   {
     id: 'b_peperoni',
     name: 'پپرونی',
     icon: b_icon_peperoni,
     layer: b_peperoni,
+    extra: false
   },
   {
     id: 'b_roast',
     name: 'رست بیف',
     icon: b_icon_roast,
     layer: b_roast,
+    extra: false
   },
 ];
 
@@ -126,23 +130,27 @@ export const vegetable = [
     name: 'فلفل دلمه',
     icon: v_icon_bellPepper,
     layer: v_bellPepper,
+    extra: false
   },
   {
     id: 'v_mushroom',
     name: 'قارچ',
     icon: v_icon_mushroom,
     layer: v_mushroom,
+    extra: false
   },
   {
     id: 'v_olive',
     name: 'زیتون',
     icon: v_icon_olive,
     layer: v_olive,
+    extra: false
   },
   {
     id: 'v_tomato',
     name: 'گوجه فرنگی',
     icon: v_icon_tomato,
     layer: v_tomato,
+    extra: false
   },
 ];
